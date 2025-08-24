@@ -2,11 +2,11 @@
 <script>
     const valorDoJantar = Number(prompt("Qual o valor do jantar?"));
     const adicionarGorjeta = prompt("Adicionar gorjeta? S/N");
-    if (adicionarGorjeta == 'S'){
+    if (adicionarGorjeta == 'S'||adicionarGorjeta == 's'){
         const valorDaGorjeta = Number(prompt("Quanto de gorjeta? 1%~100%"));
         gorjeta = valorDoJantar * valorDaGorjeta/100;
-        alert(`Gorjeta: R$${gorjeta}\nTotal: R$${valorDoJantar+gorjeta}`);
+        alert(`Gorjeta: R$${gorjeta.toFixed(2)}\nTotal: R$${(valorDoJantar+gorjeta).toFixed(2)}`);
     } else {
-        alert(`Total: R$${valorDoJantar}`);
+        alert(`Total: R$${valorDoJantar.toFixed(2)}`);
     }   
 </script>
