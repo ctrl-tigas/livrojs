@@ -1,0 +1,33 @@
+<script>
+    const a = "20";
+    /* 
+    javascript converte automaticamente -> coerção de tipo / type coercion
+    essa conversão acontece porque as operações *, / e - são vinculadas
+    aos tipos numéricas.
+    */
+    const b = a * 2; //b = 40
+    const c = a / 2; //c = 10
+    const d = a - 2; //d = 18
+
+    const e = a + 2;//e = 202 -> concatenação
+    alert(`e: ${e}`);//exibe o valor da variável e
+
+    const f = Number(a) + 2; //f = 4 pois há uma conversão de tipo explicita
+    alert(`f: ${f}`)
+    /*
+    Diferença entre Number(), parseInt()/parseFloat()
+    parse retorna o primeiro número encontrado no início de uma string
+    Number() tenta convertar a string inteira para um numero
+    */
+
+    const g= '125,689teste';
+    console.log(parseInt(g));
+    console.log(parseFloat(g)); 
+    // javascript não reconhece vírgula como separador de casa decimal
+    console.log(Number(g));
+
+    const h= '125.689teste';
+    console.log(parseInt(h));
+    console.log(parseFloat(h));
+    console.log(Number(h));
+</script>
